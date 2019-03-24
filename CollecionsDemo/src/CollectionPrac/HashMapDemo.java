@@ -11,7 +11,7 @@ public class HashMapDemo {
 		m.put("One", 1);
 		m.put("two", 2);
 		m.put("three", 3);
-		
+
 		System.out.println(m); // {One=1, two=2, three=3}
 		
 		System.out.println(m.put("three", 4));  //Returns Older value
