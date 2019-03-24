@@ -48,10 +48,10 @@ public class HashMapDemo {
 		while (ile.hasNext()) {
 			Entry<String, Integer> m1 = ile.next();
 
-			System.out.println("key is " + m1.getKey() + "Value is " + m1.getValue());
-			//key is OneValue is 1
-			//key is twoValue is 2
-			// is threeValue is 4
+			System.out.println("key is " + m1.getKey() + " Value is " + m1.getValue());
+			//key is One Value is 1
+			//key is two Value is 2
+			//Key is three Value is 4
 
 		}
 	}
