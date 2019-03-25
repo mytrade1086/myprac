@@ -1,3 +1,5 @@
+//used chromeoptions, javascript executor , windowhandles,iterator
+
 package testngvariations;
 
 import java.util.HashMap;
@@ -68,8 +70,8 @@ public class HdfcInsurance {
 				driver.findElement(By.xpath("//div[@class='customInput']//input[@id='emailID']")).sendKeys("s@s.com");
 
 				 JavascriptExecutor executor = (JavascriptExecutor) driver;
-				// executor.executeScript("document.getElementsById(‘emailID’).value=’Avinash
-				// Mishra’;");
+				// executor.executeScript("document.getElementsById(â€˜emailIDâ€™).value=â€™Avinash
+				// Mishraâ€™;");
 
 				// executor.executeScript("document.getElementById("emailID").value='new
 				// value')"/
