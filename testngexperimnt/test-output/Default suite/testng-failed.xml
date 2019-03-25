@@ -3,11 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testngvariations.TestngDataprivder">
+      <class name="testngvariations.HdfcInsurance">
         <methods>
-          <include name="rediffLogin"/>
+          <include name="hdfcnavigation"/>
         </methods>
-      </class> <!-- testngvariations.TestngDataprivder -->
+      </class> <!-- testngvariations.HdfcInsurance -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

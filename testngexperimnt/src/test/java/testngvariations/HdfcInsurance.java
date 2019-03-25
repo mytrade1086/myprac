@@ -22,7 +22,7 @@ public class HdfcInsurance {
 	@Test
 	public void hdfcnavigation() throws InterruptedException {
 
-		// ###Added below for disabling Allow Block Pop up of Chrome
+		// ###Added below for disabling Allow Block Pop up of Chrome########
 		// Create a map to store preferences
 		Map<String, Object> prefs = new HashMap<String, Object>();
 		// add key and value to map as follow to switch off browser notification
@@ -31,6 +31,8 @@ public class HdfcInsurance {
 		ChromeOptions options = new ChromeOptions();
 		// set ExperimentalOption - prefs
 		options.setExperimentalOption("prefs", prefs);
+
+		// ###for disabling Allow Block Pop up of Chrome########
 
 		System.setProperty("webdriver.chrome.driver", "H:\\chromedriver (2).exe");
 		driver = new ChromeDriver(options);
@@ -60,38 +62,23 @@ public class HdfcInsurance {
 				WebDriverWait wait = new WebDriverWait(driver, 50);
 				wait.until(ExpectedConditions.jsReturnsValue("return document.readyState==\"complete\";"));
 
-				driver.findElement(By.xpath("//div[@class='customInput']//input[@placeholder='First Name']")).sendKeys("love");
+				driver.findElement(By.xpath("//div[@class='customInput']//input[@placeholder='First Name']"))
+						.sendKeys("love");
 				driver.findElement(By.xpath("//div[@class='customInput']//input[@id='lName']")).sendKeys("rau");
 
 				driver.findElement(By.xpath("//input[@id='mobile']")).sendKeys("9766847579");
 				driver.findElement(By.xpath("//input[@id='mobile']")).sendKeys(Keys.TAB);
 				driver.findElement(By.xpath("//div[@class='customInput']//input[@id='emailID']")).sendKeys("s@s.com");
-
-				 JavascriptExecutor executor = (JavascriptExecutor) driver;
-				// executor.executeScript("document.getElementsById(‘emailID’).value=’Avinash
-				// Mishra’;");
-
-				// executor.executeScript("document.getElementById("emailID").value='new
-				// value')"/
-				 
-				//  js.executeScript("document.getElementById('some id').value='someValue';");
-
-				
-
 				driver.findElement(By.xpath("//input[@id='dob']")).sendKeys("10111986");
-//				driver.findElement(By.xpath("//input[@id='dob']")).sendKeys("11");
-//				driver.findElement(By.xpath("//input[@id='dob']")).sendKeys("1986");
-                driver.findElement(By.xpath("//input[@id='dob']")).sendKeys(Keys.TAB);
-                
-                executor.executeScript("window.scrollBy(0,100)");
-                
-                
+				driver.findElement(By.xpath("//input[@id='dob']")).sendKeys(Keys.TAB);
+
+				JavascriptExecutor executor = (JavascriptExecutor) driver;
+				executor.executeScript("window.scrollBy(0,100)");
+				// js.executeScript("document.getElementById('some id').value='someValue';");
+
 				driver.findElement(By.xpath("//input[@placeholder='City']")).sendKeys("Mumbai");
-				
-				//  js.executeScript("document.getElementById('some id').value='someValue';");
-				
-                driver.findElement(By.xpath("//input[@placeholder='City']")).sendKeys(Keys.TAB);
-                Thread.sleep(3000);
+				driver.findElement(By.xpath("//input[@placeholder='City']")).sendKeys(Keys.TAB);
+				Thread.sleep(3000);
 				driver.findElement(By.xpath("//span[contains(text(),'Proceed')]")).click();
 
 			}
